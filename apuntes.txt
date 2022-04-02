@@ -233,3 +233,31 @@ así, por ejemplo:
 
 ***Clase 11 Qué lenguaje y framework escoger para backend***
 
+- Lenguaje
+    - Python
+        Framework para trabajar con python
+            - Django: este es el framework más grande que tiene python para trabajar con backends
+            - Flask: sirve para trabajar con aplicaciones simples, sencillas y flexibles tiene una curva de aprendizaje corta, es fácil de aprender, sirve para hacer algo personalizado
+            - Fast Api: Es el framework de python más rápido, y la rápidez no es solo en el desarrollo si no en el desempeño, es mucho más rápido que django y flask
+    - JavaScript
+        - Es también usado para trabajar en fronted y también en backend
+        Framework para trabajar con JavaScript
+            - Express: Es un framework simple, fácil de aprender, es parecido a flask dentro de python
+            - Nest: Es un framework con un nivel de complejidad mucho más alto, pero a la vez tiene más ventajas
+    - PHP
+        Framework para trabajar con php
+            - Laravel: Tiene una sintaxis sencilla de trabajar y sirve para elaborar nuestros primeros proyectos en php
+            - Symfony: Este es mucho más complej, permite crear aplicaciones más escalables y complejas
+    - Java
+        Va de la mano con java android
+        Framework para trabajar con Java
+            - Spring: Sirve para crear backend de aplicaciones web
+    - Go
+        Está en auge, se puede denominar nuevo, es muy rápido, veloz, el cual permite crear aplicaciones con un excelente rendimiento
+        Framework para trabajar con Go
+            - Gin: Es el framework más popular de go y nos permite crear aplicaciones
+            - Beego: Es un framework que está en crecimiento
+    - Ruby
+        Tiene una sintaxis parecida a python
+        Framework para trabajar con Ruby
+            - Rails
