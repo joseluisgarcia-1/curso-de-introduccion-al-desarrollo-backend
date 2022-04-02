@@ -40,7 +40,8 @@ Antes de desarrollar la apliación siempre se hace el diseño de la misma
 
 - Framework:
     - Qué fabricas, modelos Conjunto de librerias, reglas, pasos y estandares para construir un producto digital
-    - Será la base sobre la cual podras construir y desarrollar tu proyecto, incluye todas las herramientas necesarias para completarlo (incluye librerías, estándares y reglas).
+    - Será la base sobre la cual podras construir y desarrollar tu proyecto, incluye todas las herramientas necesarias para completarlo (incluye librerías, estándares y 
+    reglas).
 - Librería:
     - Código escrito por otra persona
     - Solo aborda una utilidad especifica, pudiendo agregar más de una en tu proyecto. Eso si, asegurate que no interfieran con el código de otra librería.
@@ -55,7 +56,8 @@ para que la aplicación funcione
         es un lenguaje de marcado y parecido al html, este lenguaje permite medir una sintaxis especial, poder compartir información entre diferentes partes del software
         - este se ha quedado un poco resagado en cuanto a tecnología, aún se usa pero no tanto porque ya hay algo mejor como REST por ejemplo
     - REST: Representational State Transfer
-        - Para hacer un API basándonos en REST debemos hacer uso o apoyarnos en JSON(Java Script Objetc Notation), que es un lenguaje que sirve para comunicarnos entre el fronted y el backend
+        - Para hacer un API basándonos en REST debemos hacer uso o apoyarnos en JSON(Java Script Objetc Notation), que es un lenguaje que sirve para comunicarnos entre 
+        el fronted y el backend
         - JSON también es conocido como un diccionario de python que tiene llaves y valores(key:value)
         - Los diccionarios de python son exactamente lo mismo que los objetos en JavaScript
 
@@ -65,7 +67,8 @@ para que la aplicación funcione
 el request que yo hago se lo hago a un servidor que es una computadora por así decirlo que está encendido las 24 horas del día y la 
 respuesta que el servidor me da técnicamente se llama response y traer la información 
 - HTTP: Protocolo de transferencia de hipertexto
-    - Es un conjunto de reglas que sirve para comunicar dos partes, y que esa dos partes, tanto la computadora como el servidor hablen el mismo idioma para obtener la aplicación
+    - Es un conjunto de reglas que sirve para comunicar dos partes, y que esa dos partes, tanto la computadora como el servidor hablen el mismo idioma para obtener la 
+    aplicación
     ese idioma es el http, por eso es un protocolo de transferencia
 
     - Host: es al servidor que le estoy pidiendo la aplicación
@@ -94,11 +97,139 @@ Escala jerárquica de protocolos:
     Ahora si, por encima de los protocolos corre el protocolo http el cual permite la transmisión de información entre cliente y servidor en internet
     la cual puede venir en forma de html, api, css, javascript, etc.
 
-El servidor lo que hace es enviar el html, css, js a un cliente para que él mismo mediante su navegador pueda visualizar la aplicación asimismo el cliente envía un request http
-para que el mismo mediante su API pueda contestar con los datos que van a venir en formato JSON para que el cliente pueda verlos
+El servidor lo que hace es enviar el html, css, js a un cliente para que él mismo mediante su navegador pueda visualizar la aplicación asimismo el cliente envía un 
+request http para que el mismo mediante su API pueda contestar con los datos que van a venir en formato JSON para que el cliente pueda verlos
 
 ***Clase 6 ¿Cómo es el flujo de desarrollo de una apliación web?
 
-- Git: Nos permite tener el control del código, que le llamamos el sistema de control de versiones, el cual nos facilita llevar el control de desarrollo de nuestro código
+- Production: Producción
+- Deploy: Desplegar
+- Localhost, dirección ip, puerto
+
+- Git: Nos permite tener el control del código, que le llamamos el sistema de control de versiones, el cual nos facilita llevar el control de desarrollo de nuestro 
+código
 - Editores de texto: Visual Studio Code, Atom, Sublime text, Pycharm
+    - Es donde hacemos el código 
 - Browser: Es el navegador para verificar o visualizar los cambios de nuestra apliación
+- Server: Es en donde está la aplicación para que muchas más personas puedan acceder a ella, tenemos el entorno local que es en donde trabajamos en la app
+y el servidor que es donde otras personas la acceden
+- Deploy: es el proceso de llevar la aplicación desde mi local al servidor, para que esto pase se hace push a un repositorio remoto
+- Github: es un servidor que contiene el código de la aplicación y sirve para que se código pueda ser compartido con otros o con nuestro equipo de trabajo
+y cuando uno trae información o código desde el servidor a mi local se llama pull
+
+- CI: Continue Integration
+- CD: Continue Delivery/Deployment
+Estos lo que hacen es coger el código que tenemos en nuestro entorno local y testearlo, verificar que funcione bien, y si todo está correcto
+ese código se va al servidor, o a la nube, y luego el servidor va guardar el código en un dominio que es como ya dijimos antes por ejemplo:
+htt://myapp.com
+- Donde podemos comprar dominios: 
+https://www.namecheap.com/
+- Localhost: la dirección localhost es con la que trabajamos en nuestro pc lo cual está conformada por un puerto y una ip, por ejemplo:
+127.0.0.1:800, donde 127.0.0.1 es la ip y 8000 es el puerto, y eso lo conocemos entonces como localhost
+
+***Clase 7 El hogar de código: el servidor***
+
+Un servidor es una computadora que tiene una aplicación y se encarga de distribuirla en internet, y es un computador que mediante el protocolo http la voy a pedir y 
+se la voy a llevar al cliente
+- Los servidores están en lugares que se denominan data centers, que son un conjunto de servidores
+Investigar: The cloud computer
+- Hosting: Es un espacio de un servidor en donde se va guardar la app
+
+- IaaS: Infraestructura como servicio. 
+    - Es el tipo de servicio que nos permite indicarle al proveedor del servidor las especificaciones que requerimos en nuestro proyecto 
+    (RAM, SSD, CPU), es decir, puedo decir cuál es la cpu, ram, ssd, cuántas gb exactos quiero que tenga ese servidor y las especificaciones con las cuales quiero que 
+    trabaje en ese servidor, en otras palabras se tiene el control de lo que va a correr en ese servidor, y además cuánto se va dedicar a actualizar las aplicaciones 
+    de este servidor porque por ejemplo se va tener bases de datos, librerías, etc.
+    Las más populares de este tipo son: AWS, Azure y Digital Ocean
+
+    - Vps: Virtual Private Server
+        - Es un servidor privado en donde vamos a tener el control absoluto de nuestro proyecto
+    - Shared Hosting:
+        - Significa alojamiento compartido, se puede elegir, el procesador, la memoria ram, el almacenamiento entre otras, pero los recursos que tiene ese servidor
+        se van a compartir con personas que también tienen sus proyectos ahí, por eso es más económico en el mercado
+
+- PaaS: Plataforma como servicio. 
+    - Es el tipo de servicio que nos permite indicarle al proveedor del servidor que se encargue de realizar todas las actualizaciones que requerimos en nuestra app. 
+    Solo nos permite elegir que cosas particulares requiere nuestro proyecto a nivel general a través de una interfaz. 
+    por ejemplo: Bases de datos, firewall, procesador, ram, disco, sistema operativo, entre otros, entonces nosotros muchas veces ni si quiera sabemos que es lo que 
+    tiene el servidor o como está formado si no que solo nos enteramos de que funciona
+    - Las más populares de este tipo son: Firebase, Heroku y Google App Engine
+
+- SaaS: Software como servicio. 
+    - Es una aplicación que un proveedor presta para que nuestros servicios se ejecuten
+    - Esta opción nos permite utilizar una aplicación de un proveedor para hacer funcionar nuestro proyecto. Las más populares de este tipo son: Slack, Wordpress y 
+    Google Docs
+
+
+***Clase 8 Proyecto: diseño y bosquejo de una API***
+
+- CRUD:
+    - Create: Crear
+    - Read: Leer
+    - Update: Actualizar
+    - Delete: Eliminar
+
+- API: Aplication Program Interface
+para construir un api con python nos podemos apoyar en:
+    - FastApi
+    - Django → REST Framework
+    - Flask
+El lugar al que las APIs envían las peticiones y donde vive el recurso, se llama endpoint.
+
+lo que está después del dominio de nuestra app se le denomina Endpoint, en el siguiente ejemplo lo que está después de "Api" son nuestros endpoints
+- Endpoint / Route / Path
+    - Esto significa la url de nuestro proyecto y es así:
+    http://myapp.com/Api/tweets
+
+http://example.com/api/twet
+
+***Clase 9 Proyecto: diseñando los endpoints de los tweets***
+
+http://twitter.com/Api/tweets
+vamos a explicar el crud que podemos hacer con los tweets:
+CRUD
+
+C -> /post/ -> este endpoint es el encargado de crearnos los tweets, es decir, CREATE
+    por ejemplo si accedo así: http://twitter.com/api/post
+    con esto deberíamos tener acceso a la publicación de tweets mediante mi API
+R -> /tweets/ -> es el encargado de mostrarnos los tweets, es decir, READ
+    por ejemplo si accedo así: http://twitter.com/api/tweets
+    eso nos va a leer o mostrar los tweets
+U -> /tweets/{tweet_id}/update/ es el encargado de permitirnos actualizar los tweets, es decir, UPDATE
+    por ejemplo si accedo así: http://twitter.com/api/tweets/{tweet_id}/update
+    eso nos va a permitir actualizar tweets
+D -> /tweets/{tweet_id}/delete/ es el encargado de permitirnos eliminar los tweets, es decir, DELETE
+    por ejemplo si accedo así: http://twitter.com/api/tweets/{tweet_id}/delete
+    eso nos va a permitir eliminar tweets
+
+***Clase 10 Proyecto: diseñando los endpoints para los usuarios***
+
+MODELS -> tipos de datos en particular que voy a usar en mi aplicación, en este caso de ejemplo tengo a TWEETS y USERS
+los modelos en sql se conocen como tablas, y estas contienen registros y que a esos registros en programación se les denomina atributos del modelo
+
+C -> /signup/ -> este endpoint es el encargado de crearnos los usuarios, es decir, CREATE
+    por ejemplo si accedo así: http://twitter.com/api/signup
+    con esto deberíamos tener acceso a la creación o registro de usuarios mediante mi API
+R -> /users/ -> es el encargado de mostrarnos los usuarios, es decir, READ
+    por ejemplo si accedo así: http://twitter.com/api/users
+    eso nos va a leer o mostrar los usuarios
+
+/users/{user_id}/ -> nos muestra un usuario
+
+U -> /users/{user_id}/update/ es el encargado de permitirnos actualizar usuarios, es decir, UPDATE
+    por ejemplo si accedo así: http://twitter.com/api/users/{user_id}/update
+    eso nos va a permitir actualizar usuarios
+D -> /tweets/{user_id}/delete/ es el encargado de permitirnos eliminar usuarios, es decir, DELETE
+    por ejemplo si accedo así: http://twitter.com/api/users/{user_id}/delete
+    eso nos va a permitir eliminar usuarios
+
+cada vez que entremos a esos endpoints con un api el servidor me va contestar con un json, diccionario de python u objeto de javascript
+así, por ejemplo:
+{
+    'user_id': 121
+    'username': 'messi'
+    'email': 'messi@local.com'
+}
+
+***Clase 11 Qué lenguaje y framework escoger para backend***
+
