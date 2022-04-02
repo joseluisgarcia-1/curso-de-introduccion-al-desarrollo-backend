@@ -261,3 +261,12 @@ así, por ejemplo:
         Tiene una sintaxis parecida a python
         Framework para trabajar con Ruby
             - Rails
+Recomendados:
+
+Backend python:
+https://platzi.com/backend-python/
+Backend Go:
+https://platzi.com/backend-go/
+Backend con javascript:
+https://platzi.com/backend-javascript/
+
