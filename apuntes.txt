@@ -1,0 +1,46 @@
+***Clase 2 Ying y Yang de una aplicación: frontend y backend***
+
+- Frontend
+    - Css:
+        - Foundation
+        - Bootstrap
+        - Tailwind
+        - Estos son frameworks y podemos escribir el css de una manera más sencilla, amigable y rápida
+        aunque si uno escibre el css de manera directa va obtener un css más personalizado
+    Js:
+        - React.js
+        - Angular
+        - Svelte
+        - Vue
+        - Estos son librerias/frameworks podemos escribir un poco más rápido, más ágil, más segura para no tener tantos errores en el frontend de la aplicación
+
+Antes de desarrollar la apliación siempre se hace el diseño de la misma
+
+- UI design: Diseño interfaz de usuario
+    - de definen cosas como botones, colores de botones, formas de barras de búsqueda, textos, etc.
+- UX design: Diseño experiencia de usuario
+    - Nos fijamos en el botón pero no en colores, si no en dónde debería estár ubicado ese botón para que sea fácil de usar
+    - Para esto tenemos herramientas como Adobe Xd, Sketch. Figma, entre otros.
+
+- Backend:
+    - JavaScript
+    - Php
+    - Java
+    - Python
+    - Ruby
+    - Go
+    - Entre otros
+    - Algunos lenguajes tienen sus derivados es decir sus frameworks/librerias para hacer que el desarrollo se más fácil y productivo, por ejemplo
+    - Php -> Laravel
+    - Java -> Spring
+    - Ruby -> Ruby on Rails
+    - Python -> Django, Flask, Fast Api
+
+**Clase 3 Framework vs librería***
+
+- Framework:
+    - Conjunto de librerias, reglas, pasos y estandares para construir un producto digital
+    - Será la base sobre la cual podras construir y desarrollar tu proyecto, incluye todas las herramientas necesarias para completarlo (incluye librerías, estándares y reglas).
+- Librería:
+    - Código escrito por otra persona
+    - Solo aborda una utilidad especifica, pudiendo agregar más de una en tu proyecto. Eso si, asegurate que no interfieran con el código de otra librería.
