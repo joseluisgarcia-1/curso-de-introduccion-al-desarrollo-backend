@@ -39,8 +39,66 @@ Antes de desarrollar la apliación siempre se hace el diseño de la misma
 **Clase 3 Framework vs librería***
 
 - Framework:
-    - Conjunto de librerias, reglas, pasos y estandares para construir un producto digital
+    - Qué fabricas, modelos Conjunto de librerias, reglas, pasos y estandares para construir un producto digital
     - Será la base sobre la cual podras construir y desarrollar tu proyecto, incluye todas las herramientas necesarias para completarlo (incluye librerías, estándares y reglas).
 - Librería:
     - Código escrito por otra persona
     - Solo aborda una utilidad especifica, pudiendo agregar más de una en tu proyecto. Eso si, asegurate que no interfieran con el código de otra librería.
+
+***Clase 4 Cómo se conecta el frontend con el backend: API y JSON***
+
+API -> Es un sección del backend que permite que el frontend pueda comunicarse con el backend y puedan haber mensajes de ida y mensajes de vuelta
+para que la aplicación funcione
+- Estándares de construcción de esas apis:
+    - SOAP: Simple Object Acces Protocol
+        - Movia la información mediante el lenguaje XML(Extensible Markup Language)
+        es un lenguaje de marcado y parecido al html, este lenguaje permite medir una sintaxis especial, poder compartir información entre diferentes partes del software
+        - este se ha quedado un poco resagado en cuanto a tecnología, aún se usa pero no tanto porque ya hay algo mejor como REST por ejemplo
+    - REST: Representational State Transfer
+        - Para hacer un API basándonos en REST debemos hacer uso o apoyarnos en JSON(Java Script Objetc Notation), que es un lenguaje que sirve para comunicarnos entre el fronted y el backend
+        - JSON también es conocido como un diccionario de python que tiene llaves y valores(key:value)
+        - Los diccionarios de python son exactamente lo mismo que los objetos en JavaScript
+
+***Clase 5 El lenguaje que habla internet: HTTP***
+
+- Cada vez que necesito algo como cliente desde donde estoy navegando que puede ser una tablet, celular, pc o lo qué sea
+el request que yo hago se lo hago a un servidor que es una computadora por así decirlo que está encendido las 24 horas del día y la 
+respuesta que el servidor me da técnicamente se llama response y traer la información 
+- HTTP: Protocolo de transferencia de hipertexto
+    - Es un conjunto de reglas que sirve para comunicar dos partes, y que esa dos partes, tanto la computadora como el servidor hablen el mismo idioma para obtener la aplicación
+    ese idioma es el http, por eso es un protocolo de transferencia
+
+    - Host: es al servidor que le estoy pidiendo la aplicación
+    - Accept-Language: fr, Esto indica que la respuesta que yo espero, sea en frances
+    Dentro de http tenemos varios métodos como por ejemplo: GET, POST, DELETE, PUT,
+    - Cuando responde el servidor responde con el método RESPONSE y tiene casi la misma estrucutura de un metodo GET
+    - En el cuerpo casi siempre está el contenido de la aplicación a la que le hacemos el requerimiento o en el caso de una API si lo que tiene el servidor es una API
+    el cuerpo lo que tiene es un JSON que es un diccionario de python o un objeto de JavaScript y con eso obtenemos los datos que necesitamos
+    - Status code: Nos da el estado de esa respuesta si es 200 OK, nos dice que la respuesta salió bien, si está en el rango de 400 quiere decir que algún recurso no fue encontrado
+    y en el rango de los 500 quiere decir que en el servidor hay un error en el código y por lo tanto no puede entregar la respuesta
+
+    - En la respuesta obtenemos también:
+        - Date: fecha de la respuesta
+        - Server: Contiene el aplicativo que permite distribuir esa respuesta 
+        - Last-Modified: Fecha de cuándo hemos modificado el contenido de esa respuesta
+        - ETag: hash que sirve para un tema avanzado de desarrollo web que se denomina caché
+        - Accept-Ranges: Nos dice como se está entregando la información al cliente, en algunos casos en bytes
+        - Content-Lenght: Nos dice la cantidad de bytes en la que estamos entregando la información
+        - Content-Type: Cuál es el formato del body de la respuesta de ese requerimiento http
+
+Escala jerárquica de protocolos:
+    - IP: Nos da la direeción ip
+    - TCP: Nos sirven para transmitir datos a través de la IP
+    - TLS: Nos sirve para que los datos viajen de manera segura
+    - DNS, UDP: Nos sirve para convertir una dirección ip que viene del primer protocolo en un dominio, siendo dominio por ejemplo: google.com, marca.com, platzi.com, etc.
+    Ahora si, por encima de los protocolos corre el protocolo http el cual permite la transmisión de información entre cliente y servidor en internet
+    la cual puede venir en forma de html, api, css, javascript, etc.
+
+El servidor lo que hace es enviar el html, css, js a un cliente para que él mismo mediante su navegador pueda visualizar la aplicación asimismo el cliente envía un request http
+para que el mismo mediante su API pueda contestar con los datos que van a venir en formato JSON para que el cliente pueda verlos
+
+***Clase 6 ¿Cómo es el flujo de desarrollo de una apliación web?
+
+- Git: Nos permite tener el control del código, que le llamamos el sistema de control de versiones, el cual nos facilita llevar el control de desarrollo de nuestro código
+- Editores de texto: Visual Studio Code, Atom, Sublime text, Pycharm
+- Browser: Es el navegador para verificar o visualizar los cambios de nuestra apliación
